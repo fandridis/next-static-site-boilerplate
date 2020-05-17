@@ -1,6 +1,15 @@
-import '../styles/global.css';
+import React from 'react'
+import '../styles/variables.scss';
+import '../styles/global.scss';
 
-// This default export is required in a new `pages/_app.js` file.
+const Noop = ({ children }) => children
+
 export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  const Layout = Component.Layout || Noop;
+
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 import styles from './index.module.css'
+import GreenLayout from '../../layouts/GreenLayout';
 
 function Contact(props) {
   return (
@@ -13,5 +14,7 @@ function Contact(props) {
   )
 }
 
-export default Contact
+Contact.Layout = GreenLayout;
+
+export default Contact;
 

@@ -16,6 +16,7 @@ function HeaderFooterLayout(props: React.PropsWithChildren<HeaderFooterLayoutPro
     <>
       <Head>
         <title>{props.htmlTitle}</title>
+        <meta name="description" content="Description of the site"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import Link from 'next/link';
 import styles from './index.module.css'
-import GreenLayout from '../../layouts/GreenLayout';
+import { HeaderFooterLayout } from '../../layouts';
 
-function Contact(props) {
+function Contact() {
   return (
     <>
       <h1 className={styles.title}>CONTACT PAGE</h1>
@@ -14,7 +14,8 @@ function Contact(props) {
   )
 }
 
-Contact.Layout = GreenLayout;
+Contact.layout = HeaderFooterLayout
+Contact.layoutProps = { htmlTitle: 'Contact' }
 
 export default Contact;
 

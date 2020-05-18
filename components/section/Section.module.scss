@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.container {}
+
+.halfPage {
+  height: 50vh;
+}
+
+.fullPage {
+  height: 100vh;
+}
+.fullPageHeader {
+  min-height: calc(100vh - #{$header-height});
+}
+.fullPageHeaderFooter {
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+}

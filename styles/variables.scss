@@ -1,6 +1,14 @@
 /* COLORS */
 $primary-color: rgb(41, 121, 25);
 
+/* BREAKPOINTS */
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
 /* HEADER */
 $header-height: 80px;
 $footer-height: 60px;

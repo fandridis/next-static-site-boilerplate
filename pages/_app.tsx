@@ -1,5 +1,4 @@
-import React from 'react'
-import '../styles/variables.scss';
+import React from 'react';
 import '../styles/reset.scss';
 import '../styles/global.scss';
 

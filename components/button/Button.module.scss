@@ -1,3 +1,49 @@
+// Feel free to edit these settings
+// and try out different things.
+$animation-speed: 150ms;
+
+$button-bg-color: tomato;
+$button-text-color: white;
+
+// Here's the code for the buttons.
 .container {
-  color: red;
+	padding: 16px 24px;
+  
+  background: $button-bg-color;
+	border: 2px solid $button-bg-color;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+
+  box-shadow: 1px 1px 8px rgba(1, 1, 1, 0.1);
+
+  
+  &:hover {
+    background: lighten($button-bg-color, 5%);
+    border: 2px solid lighten($button-bg-color, 5%);
+  }
+
+  &:active {
+    background-color: darken($button-bg-color, 5%);
+    border: 2px solid darken($button-bg-color, 5%);
+  }
+}
+
+.outlined {
+  background: inherit;
+  color: $button-bg-color;
+  border: 2px solid $button-bg-color;
+
+  &:hover {
+    color: white;
+    background: $button-bg-color;
+    border: 2px solid $button-bg-color;
+  }
+
+  &:active {
+    background-color: darken($button-bg-color, 5%);
+    border: 2px solid darken($button-bg-color, 5%);
+  }
 }

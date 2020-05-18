@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 import { Section } from '../../components';
 import { HeaderFooterLayout } from '../../layouts';
 

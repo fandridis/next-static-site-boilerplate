@@ -14,6 +14,7 @@ Header.defaultProps = {
 const links = [
   { name: 'Home', url: '/' },
   { name: 'About', url: '/about' },
+  { name: 'Blog', url: '/blog' },
   { name: 'Contact', url: '/contact' }
 ]
 

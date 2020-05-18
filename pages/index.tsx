@@ -1,3 +1,8 @@
+/**
+ * This is the root component "ex: www.site-name.com/"
+ * A single-page website would only have this page
+ */
+
 import { HeaderFooterLayout } from '../layouts';
 import { Button, Section } from '../components';
 import styles from './index.module.scss';

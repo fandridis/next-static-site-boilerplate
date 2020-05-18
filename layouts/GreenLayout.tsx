@@ -1,3 +1,8 @@
+/**
+ * This layout is not used (taken from HeaderFooterLayout)
+ * It can be updated and be used in pages that require a different layout
+ */
+
 import React from 'react';
 import Head from 'next/head';
 
@@ -14,6 +19,7 @@ function GreenLayout(props: React.PropsWithChildren<GreenLayoutProps>) {
     <>
       <Head>
         <title>{props.htmlTitle}</title>
+        <meta name="description" content="Description of the site"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

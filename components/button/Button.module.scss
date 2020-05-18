@@ -1,8 +1,6 @@
-// Feel free to edit these settings
-// and try out different things.
-$animation-speed: 150ms;
+@import '../../styles//variables.scss';
 
-$button-bg-color: tomato;
+$button-bg-color: $primary-color;
 $button-text-color: white;
 
 // Here's the code for the buttons.

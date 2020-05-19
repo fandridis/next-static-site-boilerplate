@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import { HeaderFooterLayout } from '../../layouts';
+import { HeaderFooterLayout } from 'layouts';
 
 function Details() {
   return (

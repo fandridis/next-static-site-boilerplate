@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './index.module.css'
-import { HeaderFooterLayout } from '../../layouts';
+import { HeaderFooterLayout } from 'layouts';
 
 function Contact() {
   return (

@@ -1,4 +1,4 @@
-@import '../styles/variables.scss';
+@import 'styles/variables.scss';
 
 .main {
   min-height: calc(100% - #{$header-height} - #{$footer-height});

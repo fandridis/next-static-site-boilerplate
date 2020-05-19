@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.module.scss';
-import { Section } from '../../components';
-import { HeaderFooterLayout } from '../../layouts';
+import { Section } from 'components';
+import { HeaderFooterLayout } from 'layouts';
 
 function Blog() {
   return (

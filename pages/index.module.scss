@@ -1,27 +1,111 @@
 @import 'styles//variables.scss';
 @import 'styles//mixins.scss';
 
-$section-padding: 24px;
+$section-padding: 48px;
 
 .heroSection {
   padding: $section-padding;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   background: rgb(255, 205, 185);
+  display: flex;
+  justify-content: center;
 
-  h1 {
-    @include text-fluid(300px, 1200px, 28px, 72px);
-    color: rgb(43, 43, 43);
-    font-family: sans-serif;
-    font-weight: bold;
-    margin-bottom: 24px;
+  .container {
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .left {
+      flex: 1;
+    }
+  
+    .right {
+      flex: 1;
+  
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    h1 {
+      @include text-fluid(300px, 1200px, 24px, 80px);
+      color: rgb(43, 43, 43);
+      font-weight: bold;
+    }
+  
+    p {
+      @include text-fluid(300px, 1200px, 16px, 28px);
+      color: rgb(43, 43, 43);
+      margin-bottom: 24px;
+    }
+  }
+
+  @include if-under(md) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .right {
+        svg {
+          width: 70%;
+          height: auto;
+        }
+      }
+    }
   }
 }
 
 .whyUsSection {
   padding: $section-padding;
-  background: rgb(255, 230, 234);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    max-width: 1400;
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      margin: 24px;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 16px;
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      color: $primary-color;
+      font-size: 28px;
+    }
+    
+    p {
+      color: #555;
+      font-size: 18px;
+    }
+  }
+
+  @include if-under(md) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
 }

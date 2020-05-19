@@ -1,11 +1,11 @@
+import 'styles/reset.scss';
+import 'styles/bootstrap-grid.scss';
+import 'styles/global.scss';
+
 /**
  * This component is automatically used by NextJS.
  * We have extended it to dynamically wrap our Layouts
  */
-
-import React from 'react';
-import 'styles/reset.scss';
-import 'styles/global.scss';
 
 const Noop = ({ children }) => children;
 

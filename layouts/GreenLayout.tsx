@@ -3,7 +3,6 @@
  * It can be updated and be used in pages that require a different layout
  */
 
-import React from 'react';
 import Head from 'next/head';
 
 interface GreenLayoutProps {

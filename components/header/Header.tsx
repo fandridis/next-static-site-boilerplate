@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from './Header.module.scss';
@@ -22,12 +21,12 @@ function Header(props: React.PropsWithChildren<HeaderProps>) {
   const router = useRouter();
 
   return (
-    <header className={styles.container}>
+    <header className={styles.headerContainer}>
       <nav>
-        <div className={styles.leftSide}>
+        <div className={styles.logoContainer}>
           {props.logoTitle}
         </div>
-        <div className={styles.rightSide}>
+        <div className={styles.linksContainer}>
           {links.map(link => (
             <Link key={link.name} href={link.url}>
               <a className={router.pathname === link.url ? styles.active : styles.inactive}>

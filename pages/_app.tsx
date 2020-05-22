@@ -1,23 +1,37 @@
+/**
+ * This component is automatically used by NextJS.
+ * We have extended it to dynamically wrap our Layouts
+ */
+
+import { useState } from 'react';
 import { PageTransition } from 'next-page-transitions';
 import 'styles/reset.scss';
 import 'styles/bootstrap-grid.scss';
 import 'styles/global.scss';
 
-/**
- * This component is automatically used by NextJS.
- * We have extended it to dynamically wrap our Layouts
- */
+export interface GlobalState {
+  user: object | null,
+  theme: string
+  isLoading: false;
+}
+
+const initialGlobalState: GlobalState = {
+  user: null,
+  theme: 'light',
+  isLoading: false
+}
 
 const Noop = ({ children }) => children;
 
 function MyApp({ Component, pageProps, router }) {
   const Layout = Component.layout || Noop;
   const layoutProps = Component.layoutProps || {};
+  const [globalState, setGlobalState] = useState<GlobalState>(initialGlobalState);
 
   return (
     <Layout {...layoutProps}>
       <PageTransition timeout={300} classNames="page-transition">
-        <Component {...pageProps} key={router.route} />
+        <Component {...pageProps} key={router.route} globalState={globalState} setGlobalState={setGlobalState} />
       </PageTransition>
       <style jsx global>{`
         .page-transition-enter {

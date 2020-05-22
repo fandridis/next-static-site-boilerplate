@@ -41,8 +41,6 @@ const Animation = forwardRef((props: AnimationProps, parentExposedRef: any) => {
     const shouldAutoplay = autoplay || autoloop;
     const shouldLoop = autoloop || loopOnHover || loopOnHoverAndFreeze;
 
-    console.log('shouldLoop: ', shouldLoop)
-
     const lottieObj = lottie.loadAnimation({
       animationData: animationData,
       container: privateRef.current,

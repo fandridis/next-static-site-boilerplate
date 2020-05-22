@@ -1,22 +1,31 @@
+import { useEffect } from 'react';
 import Link from 'next/link';
 import styles from './index.module.scss';
 import { Section } from 'components';
 import { HeaderFooterLayout } from 'layouts';
+import { GlobalState } from '../_app';
 
-function About() {
+type AboutProps = {
+  globalState: GlobalState,
+  setGlobalState: Function
+}
+
+function About({ globalState, setGlobalState }: AboutProps) {
+
+  useEffect(() => {
+    console.log('globalState @ About: ', globalState)
+  }, [globalState])
+
+  const handleClick = () => {
+    setGlobalState({ ...globalState, theme: 'dark' })
+  }
+
   return (
     <>
       <Section fullPageWithHeader className={styles.blue}>
-        <h1 className={styles.title}>ABOUT PAGE</h1>
+        <h1 className={styles.title}>ABOUT PAGE - theme: {globalState.theme}</h1>
         <Link href="/"><a>Go home</a></Link>
-        <h1 className={styles.title}>ABOUT PAGE</h1>
-        <Link href="/"><a>Go home</a></Link>
-        <h1 className={styles.title}>ABOUT PAGE</h1>
-        <Link href="/"><a>Go home</a></Link>
-        <h1 className={styles.title}>ABOUT PAGE</h1>
-        <Link href="/"><a>Go home</a></Link>
-        <h1 className={styles.title}>ABOUT PAGE</h1>
-        <Link href="/"><a>Go home</a></Link>
+        <button onClick={handleClick}>Toggle theme</button>
       </Section>
 
       <Section fullPage className={styles.green}>
